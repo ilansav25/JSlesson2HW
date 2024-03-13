@@ -1,6 +1,6 @@
 //page 32 ex 4
 
-/* var input = prompt("Enter a number:");
+ var input = prompt("Enter a number:");
 var number = parseInt(input);
 var digits = [];
 
@@ -8,17 +8,17 @@ var digits = [];
 while (number > 0) {
     var digit = number % 10;
     digits.push(digit);
-    number = Math.floor(number / 10);
+    number = parseInt(number / 10);
 }
 
 digits.sort((a, b) => a - b);
 
 console.log("Digits sorted in order:");
-console.log(digits.join(", ")); */
+console.log(digits.join(", ")); 
 
 //page 32 ex 5 
 
-var start = 1;
+/* var start = 1;
 var stop = 100;
 var count = 0;
 var number = start;
@@ -41,4 +41,4 @@ while (number <= stop) {
     number++;
 }
 
-console.log("Number of prime numbers:", count);
+console.log("Number of prime numbers:", count); */
