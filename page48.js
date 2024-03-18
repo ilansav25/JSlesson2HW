@@ -1,22 +1,28 @@
 //ex 1
-function calculatePoints(results) {
+function calculatePoints(gameResults) {
     var totalPoints = 0;
 
-    for (var i = 0; i < results.length; i++) {
-        var gamePoints = results[i][0] > results[i][1] ? 2 : results[i][0] === results[i][1] ? 1 : 0;
-        totalPoints += gamePoints;
+    for (var i = 0; i < gameResults.length; i++) {
+        if (!isNaN(gameResults[i][0]) && !isNaN(gameResults[i][1])) {
+            if (gameResults[i][0] > gameResults[i][1]) {
+                totalPoints += 2;
+            } else if (gameResults[i][0] === gameResults[i][1]) {
+
+                totalPoints += 1;
+            }
+        }
     }
-    return totalPoints;
+    console.log("Total points earned by Maccabi Tel Aviv:", totalPoints);
 }
 
 
-var results = [
-    [3, 2], 
-    [1, 1], 
-    [0, 2]  
+var gameResults = [
+    [3, 2],
+    [1, 1],
+    [0, 2] 
 ];
-var points = calculatePoints(results);
-console.log("Points earned by Maccabi Tel Aviv:", points);
+calculatePoints(gameResults);
+
 
 //ex 2 
 function calculateAverage(data) {
